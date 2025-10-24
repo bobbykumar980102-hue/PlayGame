@@ -1,0 +1,13 @@
+.watermark {
+        position: fixed;       
+        top: 50%;             
+        left: 50%;             
+        transform: translate(-50%, -50%) rotate(-30deg);
+        font-size: 180px;      
+        color: black;          
+        opacity: 0.02;         
+        pointer-events: none;  
+        z-index: 1;            
+        font-family: Arial, sans-serif;
+        user-select: none;     
+      }

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      YourPlay_Play & Fun
+    </title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="watermark.css">
+    <style>
+      
+      body{
+        background-color: lightgrey;
+        padding-bottom: 5px;
+      }
+      
+      .about-web p{
+        color: white;
+        background-color: rgb(48, 47, 47);
+        padding: 10px;
+        border-radius:12px ;
+      }
+      
+      .games{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        align-items: center;
+        gap: 80px;
+        z-index: 2; 
+        margin-bottom: 80px;
+      }
+
+      
+      * {
+          box-sizing: border-box;
+      }
+      *{
+        margin-bottom: 0px;
+        margin-top: 0px;
+      }
+
+      .game-type {
+        display: inline-block;
+        width: 350px;
+        height: 350px;
+        border:none;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 4px 0px 8px rgba( 0,0,0,5);
+        transition: transform 0.15s, box-shadow 0.15s;
+      }
+      .game-type:hover{
+        transform: scale(1.01);
+        box-shadow: 8px 6px 8px rgba( 0,0,0,5);
+        cursor: pointer;
+        z-index: 0;
+
+      }
+      .game-type:active{
+        opacity: 0.8;
+        transform: scale(0.9);
+      }
+
+      .image-containeer {
+        width: 100%;
+        border-radius: 20px;
+        height: 55%;
+        margin-bottom: 0px;
+        margin-bottom: 8px;
+       
+      }
+      .game-image{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+
+      .about-game {
+        width: 100%;
+        background-color: rgb(189, 235, 235);
+        
+        height: 40%;
+        
+        border-radius: 20px;
+        text-align: center;
+      }
+      
+      
+      .game-name{
+        font-family: arial;
+        font-weight: bold;
+        font-size: 23px;
+        color: blue;
+      }
+
+      .decription{
+      
+        height: 50px;
+        font-size: 11px;
+        color: rgb(65, 65, 236);
+        font-family: arial;
+        margin-left: 8px;  
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <p class="titl">YourPlay</p>
+      </div>
+      <div class="header-right">
+        <p class="home">Home</p>
+        <a href="my-score.html">
+          <p class="score">My Score</p>
+        </a>
+        <a href="enqiry.html">
+          <p class="enquri">Enqiry</p>
+        </a>
+        <a href="help.html">
+          <p class="help">Help</p>
+        </a>
+        <a href="setting.html">
+          <p class="setting">Setting</p>
+        </a>
+        <a href="profile.html" >
+          <img class="profile" src="sidebar&header icon pic/profile pic2.jpeg" alt="Profile pic">
+        </a>
+      </div>    
+    </div>
+
+    <div class="watermark">YourPlay</div>
+
+    <div class="games">
+      <a href="outdoor_game.html">
+        <div class="game-type">
+        <div class="image-containeer">
+          <img class="game-image" src="home-page pic/outdoor game.jpg" alt="Outdoor game pic">
+        </div>
+        <div class="about-game">
+            <p class="game-name">
+              Outdoor game
+            </p>
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="2" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 75%;">
+              Outdoor games are physical activities played outside that promote fitness, teamwork, and fun in the open air. These games include a wide variety of sports and recreational activities such as football, cricket, basketball, running, cycling, and more. Playing outdoors allows participants to enjoy fresh air, sunshine, and the beauty of nature while engaging in healthy competition and social interaction. Outdoor games help develop important life skills like leadership, cooperation, and strategic thinking. They encourage children and adults to stay active, build friendships, and create lasting memories. Whether played casually or in organized events, outdoor games are a wonderful way to stay fit, have fun, and connect with others in a positive environment.
+            </marquee>
+        </div>
+        
+      </div>
+      </a>
+      
+
+      <a href="indoor_game.html">
+        <div class="game-type">
+        <div class="image-containeer">
+          <img class="game-image" src="home-page pic/indoor3.jpeg" alt="Indoor game pic">
+        </div>
+        <div class="about-game">
+            <p class="game-name">
+              Indoor game
+            </p>
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="2" 
+              scrolldelay="20"
+              onmouseover="this.stop()"
+              onmouseout="this.start()" 
+              style="display: block; height: 75%;">
+              Indoor games are games that are played inside a house, hall, or any covered area. They are perfect for rainy days or when outdoor play is not possible. Common indoor games include chess, carrom, table tennis, and Ludo. These games help improve mental skills, concentration, and strategic thinking. Chess, for example, enhances problem-solving and planning abilities. Carrom and table tennis improve hand-eye coordination and reflexes. Indoor games are also social activities, helping friends and family bond together. They require minimal space and equipment, making them convenient for small areas. Many indoor games can be played alone or with multiple players. They are safe, as there is less risk of injuries compared to outdoor sports. Indoor games can be both competitive and fun, depending on how you play. They also teach patience, teamwork, and fair play. During festivals or gatherings, indoor games are a popular choice to entertain guests. Overall, indoor games are a healthy way to spend leisure time while stimulating the mind and body.
+            </marquee>
+        </div>
+      </div>
+      </a>
+      
+      <a href="video_game.html">
+      <div class="game-type">
+        <div class="image-containeer">
+          <img class="game-image" src="home-page pic/video game2.jpeg" alt="Video game pic">
+        </div>
+        <div class="about-game">
+            <p class="game-name">
+              Video game
+            </p>
+            <marquee 
+              class="decription" 
+              behavior="scroll"
+              onmouseover="this.stop()"
+              onmouseout="this.start()" 
+              direction="up" 
+              scrollamount="2" 
+              scrolldelay="20" 
+              style="display: block; height: 75%;">
+              Video games are electronic games played on devices like computers, consoles, or mobile phones. They come in many types, including action, adventure, puzzle, and sports games. Video games are interactive, requiring players to control characters or complete tasks. They help develop problem-solving skills, hand-eye coordination, and quick decision-making. Many games also encourage strategic thinking and teamwork, especially multiplayer games. Video games can be entertaining and immersive, with realistic graphics and engaging storylines. Some educational games help players learn new concepts or improve memory. However, excessive gaming may lead to eye strain or reduced physical activity. Parents are advised to monitor screen time for children. Video games are now a popular form of entertainment worldwide, enjoyed by people of all ages. Competitive gaming, or e-sports, has become a professional field. Modern games often include online communities where players interact. Video games can also reduce stress and provide relaxation when played in moderation. They are a blend of fun, learning, and social interaction. Overall, video games are an important part of modern digital culture.
+            </marquee>
+        </div>  
+      </div>
+      </a>
+    </div>
+
+    <div class="about-web">
+      <p>Welcome to YourPlay – Where Players Connect & Compete!
+
+        YourPlay is the ultimate platform for gamers and sports enthusiasts to showcase their skills and join exciting tournaments. Players can easily create their profiles, choose their favorite game types, and find nearby events or matches to participate in. Our smart location feature ensures you never miss a game happening around you.
+
+        Track your performance with a personalized scoring system that records every match, helping you see how you stack up against other players. You can also search for players by their unique ID to check their performance, stats, and achievements, just like in GitHub for developers.
+
+        Whether you are into indoor games, outdoor sports, or online gaming, YourPlay makes it easy to connect, compete, and improve. Join tournaments, earn points, and climb the leaderboards to become the top player in your community.
+
+        YourPlay is designed to make gaming social, fun, and competitive – all in one place. Sign up today, find your next game, and let your skills shine!</p>
+    </div>
+  </body>
+</html>

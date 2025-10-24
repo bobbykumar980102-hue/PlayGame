@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Outdoor game</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="watermark.css">
+    <style>
+      body{
+        background-color: lightgray;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+
+      .outdoor-games{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 40px;
+      }
+      .game-box{
+        border: none;
+        height: 200px;
+        background-color: wheat;
+        border-radius: 12px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,2);
+        transition: transform 0.15s;
+        display: flex;
+        flex-direction: row;
+      }
+      .game-box:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+      }
+      .game-pic-div {
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 5px;
+        border: none;
+        overflow: hidden; 
+      }
+
+      .game-pic {     
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        object-fit: contain; 
+        border-radius: 8px;
+      }
+
+      .about-game-div{
+        margin-left: 20px;
+        flex: 1;
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+      }
+      .about-game-name{
+        border: none;
+        height: 40%;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        color: blue;
+        font-weight: bold;
+      }
+      .about-game{
+        border: none;
+        height: 60%;
+      }
+      .game-function{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        width: 30%;
+        height: 100%;
+        margin-right: 5px;
+        margin-left: 20px;
+        gap: 20px;
+        text-align: center;
+        margin-top: 15px;
+      }
+      .btn{
+        border: none;
+        height: 25%;
+
+      }
+
+      marquee{
+        font-size: 12px;
+        color: blue;
+      }
+      button{
+        padding: 10px 25px;
+        font-weight: bold;
+        font-family: arial;
+        border-radius: 12px;
+        background-color: rgb(80, 196, 80);
+        color: rgb(248, 245, 245);
+        border: none;
+        box-shadow: 1px 1px 5px rgba(0,0,0,2);
+        transition: padding 0.15s;
+
+      }
+      button:hover{
+        padding: 12px 28px;
+        cursor: pointer;
+      }
+      button:active{
+        opacity: 0.8;
+        transform: scale(0.9);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <p class="titl">YourPlay</p>
+      </div>
+      <div class="header-right">
+        <a href="front-page.html" >
+          <p class="home">Home</p>
+        </a>
+        <a href="my-score.html">
+          <p class="score">My Score</p>
+        </a>
+        <a href="enqiry.html">
+          <p class="enquri">Enqiry</p>
+        </a>
+        <a href="help.html">
+          <p class="help">Help</p>
+        </a>
+        <a href="setting.html">
+          <p class="setting">Setting</p>
+        </a>
+        <a href="profile.html" >
+          <img class="profile" src="sidebar&header icon pic/profile pic2.jpeg">
+        </a>
+      </div>    
+    </div>
+
+    <div class="watermark">YourPlay</div>
+
+    <div class="outdoor-games">
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="outdoor-game-pic/cricket pic 2.jpeg">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Circket
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Cricket is one of the most popular sports in the world, especially in countries like India, England, and Australia.
+
+                It is a bat-and-ball game played between two teams of eleven players each.
+
+                The game is usually played on a large circular or oval-shaped ground with a pitch at the center.
+
+                One team bats while the other bowls and fields.
+
+                The batting team aims to score as many runs as possible.
+
+                The bowling team tries to get the batsmen out and restrict runs.
+
+                The main formats of cricket are Test matches, One Day Internationals (ODIs), and Twenty20 (T20).
+
+                The game begins with a toss to decide which team will bat or bowl first.
+
+                Each innings ends when all batsmen are out or the set overs are completed.
+
+                A run is scored when the batsmen run between the wickets or hit boundaries (4s and 6s).
+
+                Famous cricketers like Sachin Tendulkar, Virat Kohli, and MS Dhoni are admired worldwide.
+
+                The International Cricket Council (ICC) governs cricket globally.
+
+                The Cricket World Cup is the biggest international tournament in this sport.
+
+                Fielding positions and teamwork are very important in cricket.
+
+                Bowlers can be fast or spin, each with unique techniques.
+
+                Umpires ensure fair play and make important decisions on the field.
+
+                The spirit of cricket promotes discipline, respect, and teamwork.
+
+                Many young players dream of representing their country in cricket.
+
+                It brings people together and creates a strong sense of unity and excitement.
+
+                Cricket is not just a game — it’s a passion and emotion for millions of fans.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-outdoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="outdoor-game-pic/football pic.jpeg">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Football
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Football is one of the most popular and widely played sports in the world.
+
+              It is also known as soccer in some countries like the United States.
+
+              The game is played between two teams of eleven players each.
+
+              The main aim is to score goals by kicking the ball into the opponent’s net.
+
+              Football is played on a rectangular field with a goalpost at each end.
+
+              Players can use any part of their body except their hands and arms to move the ball.
+
+              The goalkeeper is the only player allowed to touch the ball with hands inside the penalty area.
+
+              A football match usually lasts for 90 minutes, divided into two halves of 45 minutes each.
+
+              The team with the most goals at the end of the match wins.
+
+              Major international tournaments include the FIFA World Cup, UEFA Euro Cup, and Copa América.
+
+              The FIFA World Cup is held every four years and is the biggest event in football.
+
+              Famous football players include Lionel Messi, Cristiano Ronaldo, and Neymar Jr.
+
+              Football teaches teamwork, discipline, and fair play.
+
+              It helps players stay fit and develop quick thinking and coordination.
+
+              Millions of fans around the world watch football matches with great excitement.
+
+              Popular football clubs include Barcelona, Real Madrid, Manchester United, and Liverpool.
+
+              Referees and linesmen make sure the game is played fairly.
+
+              Football unites people from different countries and cultures.
+
+              It is played both professionally and for fun in schools and playgrounds.
+
+              Football is more than a sport — it’s a global passion that brings joy to millions.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-outdoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="outdoor-game-pic/vollyball pic.jpeg">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Vollyball
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Volleyball is a popular team sport played all around the world.
+
+              It is played between two teams of six players each.
+
+              The main aim of the game is to hit the ball over the net and make it land on the opponent’s court.
+
+              The game is played on a rectangular court divided by a high net.
+
+              Each team is allowed three touches to return the ball to the other side.
+
+              Players use their hands, arms, or wrists to hit the ball.
+
+              A team scores a point when the ball lands in the opponent’s court or when the opponent commits a fault.
+
+              A volleyball match is usually played in sets, and the team that wins three sets first wins the match.
+
+              The standard scoring system is called “Rally Point System.”
+
+              The game begins with a serve, where a player hits the ball over the net to start play.
+
+              Volleyball requires teamwork, coordination, and quick reflexes.
+
+              There are different positions like setter, spiker, blocker, and libero.
+
+              The sport can be played both indoors and on the beach (called beach volleyball).
+
+              It was invented in 1895 by William G. Morgan in the United States.
+
+              Volleyball is governed internationally by the Fédération Internationale de Volleyball (FIVB).
+
+              Major tournaments include the Volleyball World Championship and the Olympic Games.
+
+              Beach volleyball became an Olympic sport in 1996.
+
+              The game helps improve fitness, teamwork, and concentration.
+
+              It is enjoyed by people of all ages in schools, clubs, and beaches.
+
+              Volleyball is a fun, fast-paced, and exciting sport that promotes unity and sportsmanship.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-outdoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="outdoor-game-pic/basketball pic.png">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Basketball
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Basketball is a fast-paced team sport played all over the world.
+
+              It is played between two teams of five players each on the court.
+
+              The main goal of the game is to score points by shooting the ball into the opponent’s basket.
+
+              The basket is a metal ring with a net, placed 10 feet above the ground.
+
+              Players move the ball by dribbling (bouncing it while walking or running) or by passing to teammates.
+
+              The game is played on a rectangular court divided into two halves.
+
+              Each basketball game is usually divided into four quarters of equal time.
+
+              A field goal scores two or three points depending on the distance of the shot.
+
+              A free throw scores one point.
+
+              The team with the most points at the end of the game wins.
+
+              Basketball was invented in 1891 by Dr. James Naismith in the United States.
+
+              It is governed internationally by the International Basketball Federation (FIBA).
+
+              The NBA (National Basketball Association) is the most famous professional basketball league.
+
+              Famous basketball players include Michael Jordan, LeBron James, and Stephen Curry.
+
+              The game requires speed, accuracy, teamwork, and stamina.
+
+              Both men and women play basketball professionally and recreationally.
+
+              Basketball helps build physical fitness, discipline, and coordination.
+
+              It can be played both indoors and outdoors.
+
+              Many schools and colleges organize basketball tournaments to encourage teamwork and sportsmanship.
+
+              Basketball is not just a sport — it’s a global passion that inspires millions around the world.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-outdoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <P class="next-game">More games coming soon.....</P>
+  </body>
+</html>

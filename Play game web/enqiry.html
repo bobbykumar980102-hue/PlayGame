@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enquiry - YourPlay</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="watermark.css">
+  <style>
+    body {
+      background-color: lightgrey;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-bottom: 40px;
+    }
+
+    .enquiry-container {
+      width: 500px;
+      background: white;
+      margin: 120px auto;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+      padding: 25px 30px;
+    }
+
+    .enquiry-container h2 {
+      text-align: center;
+      color: rgb(0, 162, 255);
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+      color: rgb(60, 60, 60);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid rgb(170, 170, 170);
+      border-radius: 8px;
+      margin-top: 5px;
+      font-size: 14px;
+      resize: none;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      margin-left: 25%;
+      width: 50%;
+      margin-top: 20px;
+      background-color: rgb(80, 196, 80);
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+    button:active{
+      transform: scale(0.9);
+    }
+   
+  </style>
+</head>
+<body>
+
+  <div class="header">
+      <div class="header-left">
+        <p class="titl">YourPlay</p>
+      </div>
+      <div class="header-right">
+        <a href="front-page.html" >
+          <p class="home">Home</p>
+        </a>
+        <a href="my-score.html">
+          <p class="score">My Score</p>
+        </a>
+        <a href="enqiry.html">
+          <p class="enquri">Enqiry</p>
+        </a>
+        <a href="help.html">
+          <p class="help">Help</p>
+        </a>
+        <a href="setting.html">
+          <p class="setting">Setting</p>
+        </a>
+        <a href="profile.html" >
+          <img class="profile" src="sidebar&header icon pic/profile pic2.jpeg">
+        </a>
+      </div>    
+    </div>
+
+    <div class="watermark">YourPlay</div>
+
+  <div class="enquiry-container">
+    <h2>Send Your Enquiry</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="topic">Select Topic:</label>
+      <select id="topic" required>
+        <option value="">-- Choose a topic --</option>
+        <option>Account issue</option>
+        <option>Game related</option>
+        <option>Scoring or leaderboard</option>
+        <option>Report a bug</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </div>
+
+  <div class="watermark">YourPlay</div>
+
+</body>
+</html>

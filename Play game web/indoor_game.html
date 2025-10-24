@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Indoor game</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="watermark.css">
+    <style>
+      body{
+        background-color: lightgray;
+      }
+      a{
+        color: white;
+        text-decoration: none;
+      }
+
+      .indoor-games{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        gap: 40px;
+      }
+      .game-box{
+        border: none;
+        height: 200px;
+        background-color: wheat;
+        border-radius: 12px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,2);
+        transition: transform 0.15s;
+        display: flex;
+        flex-direction: row;
+      }
+      .game-box:hover{
+        cursor: pointer;
+        transform: scale(1.03);
+      }
+      .game-pic-div {
+        position: relative;
+        width: 30%;
+        height: 100%;
+        margin-left: 5px;
+        border: none;
+        overflow: hidden; 
+      }
+
+      .game-pic {     
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        object-fit: contain; 
+        border-radius: 8px;
+      }
+
+      .about-game-div{
+        margin-left: 20px;
+        flex: 1;
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+      }
+      .about-game-name{
+        border: none;
+        height: 40%;
+        margin: auto;
+        margin-top: 20px;
+        font-size: 30px;
+        color: blue;
+        font-weight: bold;
+      }
+      .about-game{
+        border: none;
+        height: 60%;
+      }
+      .game-function{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        width: 30%;
+        height: 100%;
+        margin-right: 5px;
+        margin-left: 20px;
+        gap: 20px;
+        text-align: center;
+        margin-top: 15px;
+      }
+      .btn{
+        border: none;
+        height: 25%;
+
+      }
+
+      marquee{
+        font-size: 12px;
+        color: blue;
+      }
+      button{
+        padding: 10px 25px;
+        font-weight: bold;
+        font-family: arial;
+        border-radius: 12px;
+        background-color: rgb(80, 196, 80);
+        color: rgb(248, 245, 245);
+        border: none;
+        box-shadow: 1px 1px 5px rgba(0,0,0,2);
+        transition: padding 0.15s;
+
+      }
+      button:hover{
+        padding: 12px 28px;
+        cursor: pointer;
+      }
+      button:active{
+        opacity: 0.8;
+        transform: scale(0.9);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <p class="titl">YourPlay</p>
+      </div>
+      <div class="header-right">
+        <a href="front-page.html" >
+          <p class="home">Home</p>
+        </a>
+        <a href="my-score.html">
+          <p class="score">My Score</p>
+        </a>
+        <a href="enqiry.html">
+          <p class="enquri">Enqiry</p>
+        </a>
+        <a href="help.html">
+          <p class="help">Help</p>
+        </a>
+        <a href="setting.html">
+          <p class="setting">Setting</p>
+        </a>
+        <a href="profile.html" >
+          <img class="profile" src="sidebar&header icon pic/profile pic2.jpeg">
+        </a>
+      </div>    
+    </div>
+
+    <div class="watermark">YourPlay</div>
+
+    <div class="indoor-games">
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="indoor-game-pic/chess pic.png">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Chess
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Chess is a strategic indoor board game played between two players.
+
+              It is one of the oldest and most popular games in the world.
+
+              The game is played on a square board divided into 64 squares (8 rows and 8 columns).
+
+              Each player has 16 pieces — one side white and the other black.
+
+              The pieces include one king, one queen, two rooks, two bishops, two knights, and eight pawns.
+
+              The main goal of the game is to checkmate the opponent’s king.
+
+              “Checkmate” means the king is under attack and has no safe move left.
+
+              Chess requires deep thinking, planning, and concentration.
+
+              Each piece moves in a specific way — for example, knights move in an L-shape and bishops move diagonally.
+
+              The game begins with the player who has white pieces making the first move.
+
+              Chess is governed internationally by the Fédération Internationale des Échecs (FIDE).
+
+              It can be played both on a physical board and online using computers or mobile apps.
+
+              Famous chess players include Viswanathan Anand, Magnus Carlsen, Garry Kasparov, and Bobby Fischer.
+
+              Chess tournaments are held all over the world, including the World Chess Championship.
+
+              Playing chess helps improve memory, patience, and decision-making skills.
+
+              It is also a great mental exercise that develops problem-solving ability.
+
+              Chess can be enjoyed by people of all ages.
+
+              The game can last from a few minutes to several hours, depending on the level of play.
+
+              Many schools include chess as an educational activity to develop logical thinking in students.
+
+              Chess is often called the “game of kings” because of its history, intelligence, and elegance.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-indoor.html">
+              <button>Participate</button>
+            </a> 
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="indoor-game-pic/card  pic.png">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Card
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              A card game is a popular indoor game played with a deck of playing cards.
+
+              It can be played by two or more players.
+
+              Card games are played for fun, skill, or sometimes competition.
+
+              A standard deck has 52 cards divided into four suits — hearts, diamonds, clubs, and spades.
+
+              Each suit has 13 cards — numbers from 2 to 10, plus Jack, Queen, King, and Ace.
+
+              There are many types of card games such as Rummy, Poker, Bridge, Solitaire, and Uno.
+
+              Some card games are based on luck, while others require strategy and planning.
+
+              Players take turns drawing, discarding, or arranging cards according to the rules.
+
+              Rummy and Teen Patti are very popular in India.
+
+              Uno is a colorful and fun card game loved by children and families.
+
+              Card games can be played indoors at home, in clubs, or online.
+
+              They help improve memory, concentration, and decision-making skills.
+
+              In old times, people used cards for entertainment and social gatherings.
+
+              Card games can be both competitive and relaxing.
+
+              Many people play card games during festivals, family get-togethers, or parties.
+
+              Some card games involve bets or scoring systems to decide the winner.
+
+              Playing cards are usually made of paper or plastic-coated material.
+
+              Card games teach patience, strategy, and observation.
+
+              They are suitable for all age groups, from kids to adults.
+
+              Card games are a classic indoor pastime that brings people together for fun and bonding.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-indoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="indoor-game-pic/badminton pic.png">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Badminton
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Badminton is a very popular indoor sport played all over the world.
+
+              It is played between two players (singles) or four players (doubles).
+
+              The game is played on a rectangular court divided by a net in the middle.
+
+              Players use a racket to hit a shuttlecock back and forth over the net.
+
+              The aim is to make the shuttlecock land in the opponent’s court to score points.
+
+              A match is usually played as the best of three games, each up to 21 points.
+
+              Players score points when their opponent fails to return the shuttlecock within bounds.
+
+              Badminton requires speed, stamina, accuracy, and quick reflexes.
+
+              It was first played in India and was known as “Poona” before spreading to England.
+
+              The modern rules were established in England in the 19th century.
+
+              It is governed internationally by the Badminton World Federation (BWF).
+
+              Badminton is also an Olympic sport, first included in the 1992 Barcelona Olympics.
+
+              The game can be played indoors to avoid wind, though some people play casually outdoors.
+
+              The main shots in badminton are serve, smash, drop, and clear.
+
+              Famous badminton players include P. V. Sindhu, Saina Nehwal, Lin Dan, and Lee Chong Wei.
+
+              It helps improve fitness, coordination, and concentration.
+
+              The shuttlecock is very light and made from feathers or synthetic material.
+
+              The racket is lightweight and flexible, allowing fast and powerful shots.
+
+              Badminton is enjoyed by all age groups, from children to professionals.
+
+              It is a fun, energetic, and healthy sport that promotes teamwork and discipline.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-indoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="game-box">
+        <div class="game-pic-div">
+          <img class="game-pic" src="indoor-game-pic/tabel tennis pic.png">
+        </div>
+        <div class="about-game-div">
+          <div class="about-game-name">
+            Table Tennis
+          </div>
+          <div class="about-game">
+            <marquee 
+              class="decription" 
+              behavior="scroll" 
+              direction="up" 
+              scrollamount="4" 
+              scrolldelay="20" 
+              onmouseover="this.stop()"
+              onmouseout="this.start()"
+              style="display: block; height: 95%;">
+              Table Tennis, also called Ping Pong, is a popular indoor sport.
+
+              It is played between two players (singles) or four players (doubles).
+
+              The game is played on a rectangular table divided by a net in the middle.
+
+              Players use small paddles/rackets to hit a lightweight ball back and forth.
+
+              The main aim is to score points by making the ball land on the opponent’s side without being returned.
+
+              Table tennis matches are usually played in best of five or seven games, each up to 11 points.
+
+              A player scores a point when the opponent fails to hit the ball back correctly.
+
+              The game requires quick reflexes, concentration, and hand-eye coordination.
+
+              It was invented in England in the late 19th century as a parlor game.
+
+              Table tennis is governed internationally by the International Table Tennis Federation (ITTF).
+
+              It became an Olympic sport in 1988 at the Seoul Olympics.
+
+              The main shots include forehand, backhand, smash, and serve.
+
+              Famous players include Ma Long, Fan Zhendong, Ding Ning, and Sharath Kamal.
+
+              The ball is usually made of celluloid or plastic and weighs about 2.7 grams.
+
+              The paddle is often covered with rubber to allow spin and control.
+
+              Table tennis can be played indoors to avoid wind or external disturbances.
+
+              It helps improve reflexes, agility, and mental alertness.
+
+              The game is enjoyed by children, adults, and professional players worldwide.
+
+              Many schools and clubs organize table tennis tournaments to encourage participation.
+
+              Table tennis is a fun, fast, and healthy sport that promotes skill, focus, and teamwork.
+            </marquee>
+          </div>
+        </div>
+        <div class="game-function">
+          <div class="btn">
+            <a href="participate-indoor.html">
+              <button>Participate</button>
+            </a>
+          </div>
+          <div class="btn">
+            <button>Game location</button>
+          </div>
+          <div class="btn">
+            <button>Tournament</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <P class="next-game">More games coming soon.....</P>
+  </body>
+</html>

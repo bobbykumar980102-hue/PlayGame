@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Score - YourPlay</title>
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="watermark.css">
+  <style>
+    body {
+      background-color: lightgrey;
+      margin: 0;
+      padding-bottom: 30px;
+      font-family: Arial, sans-serif;
+    }
+    .profile-section {
+      text-align: center;
+      margin-top: 120px;
+      background-color: white;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-section img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .username {
+      font-size: 24px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    .total-score {
+      font-size: 18px;
+      color: darkgreen;
+      margin-bottom: 10px;
+    }
+
+    .games-score {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      flex-wrap: wrap;
+      row-gap: 130px;
+    }
+
+    .game-card {
+      background-color: white;
+      width: 320px;
+      height: 320px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+      cursor: pointer;
+    }
+    .game-name {
+      font-weight: bold;
+      font-size: 20px;
+      color: blue;
+    }
+    .score-value {
+      font-size: 24px;
+      color: darkred;
+      margin-top: 10px;
+    }
+    .rank {
+      font-size: 16px;
+      color: gray;
+      margin-top: 5px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 320px;
+      height: 320px;
+      perspective: 1000px;
+      transition: transform 0.2s;
+    }
+    .flip-card:hover{
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d; 
+    }
+
+    .flip-card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, 
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+      background-color: white;
+      padding: 15px;
+      top: 0; 
+      left: 0; 
+    }
+
+    .flip-card-front {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      overflow-y: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+    }
+    th {
+      background-color: rgb(189, 235, 235);
+      color: darkblue;
+    }
+    tr:hover {background-color: #e3f2fd;}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+      <div class="header-left">
+        <p class="titl">YourPlay</p>
+      </div>
+      <div class="header-right">
+        <a href="front-page.html" >
+          <p class="home">Home</p>
+        </a>
+        <a href="my-score.html">
+          <p class="score">My Score</p>
+        </a>
+        <a href="enqiry.html">
+          <p class="enquri">Enqiry</p>
+        </a>
+        <a href="help.html">
+          <p class="help">Help</p>
+        </a>
+        <a href="setting.html">
+          <p class="setting">Setting</p>
+        </a>
+        <a href="profile.html" >
+          <img class="profile" src="sidebar&header icon pic/profile pic2.jpeg">
+        </a>
+      </div>    
+    </div>
+
+  <div class="watermark">YourPlay</div>
+
+  <div class="profile-section">
+    <img src="sidebar&header icon pic/profile pic2.jpeg" alt="Profile Picture">
+    <p class="username">Username</p>
+    <p class="total-score">Total Score: <b>980</b></p>
+
+    <div class="games-score">
+
+      <div class="flip-card">
+        <div class="flip-card-inner" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-front">
+            <p class="game-name">Outdoor Game</p>
+            <p class="score-value">420</p>
+            <p class="rank">Rank: #5</p>
+            <p style="font-size:12px; color:gray;">Click to view detailed scores</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="game-name" style="margin-bottom:10px;">Outdoor Game Details</p>
+            <table>
+              <tr><th>Game</th><th>Score</th><th>Matches</th><th>Rank</th></tr>
+              <tr><td>Cricket</td><td>180</td><td>5</td><td>#3</td></tr>
+              <tr><td>Football</td><td>120</td><td>4</td><td>#5</td></tr>
+              <tr><td>Basketball</td><td>70</td><td>3</td><td>#7</td></tr>
+              <tr><td>Volleyball</td><td>50</td><td>2</td><td>#9</td></tr>
+            </table>
+            <p style="font-size:12px; color:gray; margin-top:8px;">Click to flip back</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card">
+        <div class="flip-card-inner" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-front">
+            <p class="game-name">Indoor Game</p>
+            <p class="score-value">310</p>
+            <p class="rank">Rank: #7</p>
+            <p style="font-size:12px; color:gray;">Click to view detailed scores</p>
+          </div>
+          <div class="flip-card-back">
+            <p class="game-name" style="margin-bottom:10px;">Indoor Game Details</p>
+            <table>
+              <tr><th>Game</th><th>Score</th><th>Matches</th><th>Rank</th></tr>
+              <tr><td>Chess</td><td>85</td><td>4</td><td>#5</td></tr>
+              <tr><td>Card Game</td><td>70</td><td>3</td><td>#6</td></tr>
+              <tr><td>Badminton</td><td>80</td><td>3</td><td>#4</td></tr>
+              <tr><td>Table Tennis</td><td>75</td><td>2</td><td>#7</td></tr>
+            </table>
+            <p style="font-size:12px; color:gray; margin-top:8px;">Click to flip back</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <p class="game-name">Video Game</p>
+        <p class="score-value">210</p>
+        <p class="rank">Rank: #12</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
